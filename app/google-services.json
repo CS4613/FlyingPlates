@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "82487295985",
+    "firebase_url": "https://orderdelivery-83f92.firebaseio.com",
+    "project_id": "orderdelivery-83f92",
+    "storage_bucket": "orderdelivery-83f92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82487295985:android:b0c8e50c13891e685c4e50",
+        "android_client_info": {
+          "package_name": "com.example.foodorderapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82487295985-62a2bdc31gmemhdi7p0li5grbcaatui5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDTinfPFjSHcxyLVp2F4XSNrtgtt9wcgI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82487295985-62a2bdc31gmemhdi7p0li5grbcaatui5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
