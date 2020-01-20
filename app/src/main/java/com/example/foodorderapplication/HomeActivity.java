@@ -25,10 +25,11 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(new Intent(getApplicationContext(), HomeActivity.class));
                         break;
                     case R.id.action_order:
+
                         break;
                     case R.id.action_profile:
                         finish();
-                        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                        startActivity(new Intent(getApplicationContext(), ProfileToggle.class));
                         break;
                 }
                 return true;

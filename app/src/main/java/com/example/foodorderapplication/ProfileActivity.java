@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -21,7 +22,7 @@ import com.google.firebase.database.ValueEventListener;
 
 
 public class ProfileActivity extends AppCompatActivity implements View.OnClickListener{
-    private Button buttonlogout;
+
     private TextView userdata;
     private EditText username;
     private EditText address;
@@ -42,15 +43,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             startActivity(new Intent(this,LoginActivity.class));
         }
         FirebaseUser user=firebaseAuth.getCurrentUser();
-        buttonlogout =(Button)findViewById(R.id.buttonSignOut);
         userdata =(TextView) findViewById(R.id.textProfile);
         username=(EditText) findViewById(R.id.TextName);
         address=(EditText) findViewById(R.id.textAddress);
         phonenumber=(EditText)findViewById(R.id.textPhoneNumber);
         saveInformation=(Button)findViewById(R.id.saveInformation);
-
-        userdata.setText("Welcome "+user.getEmail());
-        buttonlogout.setOnClickListener(this);
         saveInformation.setOnClickListener(this);
     }
 
@@ -59,28 +56,39 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         String name=username.getText().toString().trim();
         String addressdata=address.getText().toString().trim();
         int number=Integer.parseInt(phonenumber.getText().toString().trim());
+        if(TextUtils.isEmpty(name))
+        {
+            Toast.makeText(this,"Please enter your name",Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if(TextUtils.isEmpty(addressdata))
+        {
+            Toast.makeText(this,"Please enter your address",Toast.LENGTH_SHORT).show();
+            return;
+        }
 
+        if(TextUtils.isEmpty(Integer.toString(number)))
+        {
+            Toast.makeText(this,"Please enter your mobile number",Toast.LENGTH_SHORT).show();
+            return;
+        }
         ProfileInformation profileInformation=new ProfileInformation(name,addressdata,number);
         FirebaseUser eUser=firebaseAuth.getCurrentUser();
         databaseReference.push().setValue("value");
         databaseReference.child(eUser.getUid()).setValue(profileInformation);
-        if(databaseReference!=null) {
+        if(databaseReference!=null&&!name.isEmpty()&&!addressdata.isEmpty()) {
             Toast.makeText(this, "Information Saved....", Toast.LENGTH_LONG).show();
         }
     }
     @Override
     public void onClick(View v) {
-        if(v==buttonlogout)
-        {
-            firebaseAuth.signOut();
-            finish();
-            startActivity(new Intent(this,LoginActivity.class));
-        }
         if(v==saveInformation)
         {
             setSaveInformation();
             finish();
             startActivity(new Intent(this,HomeActivity.class));
         }
+
     }
+
 }

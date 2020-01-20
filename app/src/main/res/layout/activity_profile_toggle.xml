@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity"
+    tools:context=".ProfileToggle"
     >
 
 
@@ -22,41 +22,34 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Profile Page"
             android:id="@+id/textProfile"
-            android:gravity="center"/>
-        <EditText
-            android:id="@+id/TextName"
-            android:layout_width="match_parent"
+            android:gravity="center"
+            android:paddingBottom="100dp"/>
+
+        <Button
+            android:id="@+id/buttonView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="Enter Your Name"
-            android:layout_margin="15dp"/>
-        <EditText
-            android:id="@+id/textAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter your address"
-            android:layout_margin="15dp"/>
-        <EditText
-            android:id="@+id/textPhoneNumber"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter your PhoneNumber"
-            android:layout_margin="15dp"/>
+            android:layout_gravity="center_horizontal"
+            android:text="View Information" />
         <Button
             android:id="@+id/saveInformation"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Save Information"
-            android:layout_margin="15dp"
+            android:text="Edit Information"
+            android:layout_gravity="center_horizontal"
             />
 
 
+
+        <Button
+            android:id="@+id/buttonSignOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SignOut"
+            android:layout_gravity="center_horizontal"
+            />
+
     </LinearLayout>
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/bottom_navigation"
-        />
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
