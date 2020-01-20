@@ -28,7 +28,9 @@ public class HomeActivity extends AppCompatActivity {
                         break;
                     case R.id.action_profile:
                         finish();
-                        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));                }
+                        startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                        break;
+                }
                 return true;
             }
         });

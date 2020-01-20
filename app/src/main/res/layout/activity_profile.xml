@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    tools:context=".ProfileActivity"
+    >
 
 
     <LinearLayout
@@ -13,14 +14,40 @@
         android:orientation="vertical"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+        android:paddingTop="100dp"
         >
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Profile Page"
-        android:id="@+id/textProfile"
-        android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Profile Page"
+            android:id="@+id/textProfile"
+            android:gravity="center"/>
+        <EditText
+            android:id="@+id/TextName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Name"
+            android:layout_margin="15dp"/>
+        <EditText
+            android:id="@+id/textAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your address"
+            android:layout_margin="15dp"/>
+        <EditText
+            android:id="@+id/textPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your PhoneNumber"
+            android:layout_margin="15dp"/>
+        <Button
+            android:id="@+id/saveInformation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Information"
+            android:layout_margin="15dp"
+            />
     <Button
         android:id="@+id/buttonSignOut"
         android:layout_width="wrap_content"
