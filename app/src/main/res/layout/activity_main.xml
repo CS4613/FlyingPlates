@@ -8,6 +8,8 @@
     android:paddingTop="16dp"
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
+    android:orientation="vertical"
+    android:background="@drawable/fg"
     tools:context=".MainActivity">
 
     <LinearLayout

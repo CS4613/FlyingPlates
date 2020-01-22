@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ProfileToggle"></activity>
+        <activity android:name=".HomeDashBoard"></activity>
+        <activity android:name=".ProfileToggle" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".LoginActivity" />
@@ -22,7 +23,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ViewDataBase"></activity>
+        <activity android:name=".ViewDataBase" />
     </application>
 
 </manifest>
