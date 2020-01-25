@@ -10,14 +10,14 @@
     <LinearLayout
         android:orientation="vertical"
         android:background="@drawable/fg"
-        android:weightSum="10"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
     <RelativeLayout
         android:layout_weight="2"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        >
 
         <TextView
             android:id="@+id/textGrid"
@@ -39,7 +39,8 @@
         android:layout_weight="8"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:padding="14dp"
+        android:padding="15dp"
+        android:paddingTop="20dp"
         >
 
     <!-- Row 1 -->
@@ -77,7 +78,7 @@
                 android:layout_marginTop="25dp"/>
 
             <TextView
-                android:text="America"
+                android:text="American"
                 android:textAlignment="center"
                 android:layout_marginBottom="10dp"
                 android:textColor="@android:color/black"
@@ -116,12 +117,12 @@
                         android:layout_width="144dp"
                         android:layout_height="108dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/image_1"
+                        android:src="@drawable/chickenbiryani_ind01"
                         android:scaleType="centerCrop"
                         android:layout_marginTop="25dp"/>
 
                     <TextView
-                        android:text="America"
+                        android:text="Indian"
                         android:textAlignment="center"
                         android:layout_marginBottom="10dp"
                         android:textColor="@android:color/black"
@@ -161,12 +162,12 @@
                         android:layout_width="144dp"
                         android:layout_height="108dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/image_1"
+                        android:src="@drawable/tacos_de_pollo_m01"
                         android:scaleType="centerCrop"
                         android:layout_marginTop="25dp"/>
 
                     <TextView
-                        android:text="America"
+                        android:text="Mexican"
                         android:textAlignment="center"
                         android:layout_marginBottom="10dp"
                         android:textColor="@android:color/black"
@@ -206,12 +207,12 @@
                         android:layout_width="144dp"
                         android:layout_height="108dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/image_1"
+                        android:src="@drawable/basil_blur_close_up_i01"
                         android:scaleType="centerCrop"
                         android:layout_marginTop="25dp"/>
 
                     <TextView
-                        android:text="America"
+                        android:text="Italian"
                         android:textAlignment="center"
                         android:layout_marginBottom="10dp"
                         android:textColor="@android:color/black"
@@ -250,12 +251,12 @@
                         android:layout_width="144dp"
                         android:layout_height="108dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/image_1"
+                        android:src="@drawable/chickenmanchuria_c01"
                         android:scaleType="centerCrop"
                         android:layout_marginTop="25dp"/>
 
                     <TextView
-                        android:text="America"
+                        android:text="Chinese"
                         android:textAlignment="center"
                         android:layout_marginBottom="10dp"
                         android:textColor="@android:color/black"
@@ -295,12 +296,12 @@
                         android:layout_width="144dp"
                         android:layout_height="108dp"
                         android:layout_gravity="center_horizontal"
-                        android:src="@drawable/image_1"
+                        android:src="@drawable/chicken_katsu_curry_j01"
                         android:scaleType="centerCrop"
                         android:layout_marginTop="25dp"/>
 
                     <TextView
-                        android:text="America"
+                        android:text="Japanese"
                         android:textAlignment="center"
                         android:layout_marginBottom="10dp"
                         android:textColor="@android:color/black"
@@ -313,7 +314,19 @@
 
         </androidx.cardview.widget.CardView>
 
+    </GridLayout>
 
 
-    </GridLayout></LinearLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_navigation"
+            android:background="?android:attr/windowBackground"
+            />
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

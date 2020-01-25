@@ -22,10 +22,11 @@ public class HomeActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.action_home:
                         finish();
-                        startActivity(new Intent(getApplicationContext(), HomeActivity.class));
+                        startActivity(new Intent(getApplicationContext(), HomeDashBoard.class));
                         break;
                     case R.id.action_order:
-
+                        finish();
+                        //startActivity(new Intent(getApplicationContext(), HomeDashBoard.class));
                         break;
                     case R.id.action_profile:
                         finish();
