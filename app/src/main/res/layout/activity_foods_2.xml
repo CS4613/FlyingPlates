@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+
+    <LinearLayout
+        android:weightSum="10"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/item_image_indian1"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="128dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chickenbiryani_ind01"
+            />
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item_name_indian1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Food Name"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/item_place_indian1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food Place"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/item_price_indian1"
+            android:text="$ price"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:layout_weight="2"
+            android:background="@drawable/capsule"
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
