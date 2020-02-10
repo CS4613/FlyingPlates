@@ -74,7 +74,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 if(task.isSuccessful())
                 {
                     finish();
-                    startActivity(new Intent(getApplicationContext(),HomeActivity.class));
                     startActivity(new Intent(getApplicationContext(),HomeDashBoard.class));
                 }
             }
@@ -89,7 +88,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(v==signUp)
         {
             finish();
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this, SignUpActivity.class));
         }
     }
 }

@@ -18,7 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
     private Button button;
     private EditText email;
     private EditText password;
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this,"Could Not Register, Please try again",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this,"Could Not Register, Please try again",Toast.LENGTH_SHORT).show();
                 }
                 progressDialog.dismiss();
             }

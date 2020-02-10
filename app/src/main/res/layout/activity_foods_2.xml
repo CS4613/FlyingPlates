@@ -42,6 +42,19 @@
                 android:text="Food Place"
                 android:textSize="14sp"
                 />
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:id="@+id/number_button"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="18dp"
+                app:textSize="9sp"
+                app:backGroundColor="@color/colorAccent"
+                app:initialNumber="0"
+                app:finalNumber="5"
+                />
+
         </LinearLayout>
         <TextView
             android:id="@+id/item_price_indian1"

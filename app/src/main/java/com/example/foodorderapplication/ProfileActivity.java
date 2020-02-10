@@ -86,7 +86,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         {
             setSaveInformation();
             finish();
-            startActivity(new Intent(this,HomeActivity.class));
+            startActivity(new Intent(this,HomeDashBoard.class));
         }
 
     }

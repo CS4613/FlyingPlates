@@ -18,15 +18,15 @@ import static com.example.foodorderapplication.FinalCartPreview.finalarray;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class IndianFoodAdapter extends RecyclerView.Adapter<IndianFoodAdapter.ViewHolder> implements  View.OnClickListener{
+public class AmericanFoodAdapter extends RecyclerView.Adapter<AmericanFoodAdapter.ViewHolder> implements  View.OnClickListener{
     ItemClickListener itemClickListener;
     TextView textView,Des;
     public static ArrayList<ModelStoreFood> modelStoreFoods = new ArrayList<ModelStoreFood>();
     public static ArrayList<ModelFood> modelFoods;
     public ModelStoreFood foodItem;
     ModelFood modelFood;
-   private Context mcontext;
-    IndianFoodAdapter(Context context, ArrayList<ModelFood> list){
+    private Context mcontext;
+    AmericanFoodAdapter(Context context, ArrayList<ModelFood> list){
         mcontext=context;
         modelFoods=list;
     }
@@ -42,10 +42,10 @@ public class IndianFoodAdapter extends RecyclerView.Adapter<IndianFoodAdapter.Vi
         ElegantNumberButton elegantNumberButton;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            itemImage = itemView.findViewById(R.id.item_image_indian1);
-            item_name = itemView.findViewById(R.id.item_name_indian1);
-            item_place = itemView.findViewById(R.id.item_place_indian1);
-            item_price = itemView.findViewById(R.id.item_price_indian1);
+            itemImage = itemView.findViewById(R.id.item_image_american1);
+            item_name = itemView.findViewById(R.id.item_name_american1);
+            item_place = itemView.findViewById(R.id.item_place_american1);
+            item_price = itemView.findViewById(R.id.item_price_american1);
             elegantNumberButton=(ElegantNumberButton)itemView.findViewById(R.id.number_button);
         }
     }
@@ -53,7 +53,7 @@ public class IndianFoodAdapter extends RecyclerView.Adapter<IndianFoodAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View view = layoutInflater.inflate(R.layout.activity_foods_2,parent,false);
+        View view = layoutInflater.inflate(R.layout.activity_foods_1,parent,false);
         ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
@@ -113,7 +113,7 @@ public class IndianFoodAdapter extends RecyclerView.Adapter<IndianFoodAdapter.Vi
 
     }
 
-   @Override
+    @Override
     public int getItemCount() {
         return modelFoods.size();
     }
