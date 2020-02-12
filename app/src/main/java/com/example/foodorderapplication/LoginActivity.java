@@ -40,12 +40,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         buttonsignIn.setOnClickListener(this);
         signUp.setOnClickListener(this);
 
-        if(firebaseAuth.getCurrentUser()!=null)
-        {
-            finish();
-            startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
-        }
-
     }
 
     private void userLogin()

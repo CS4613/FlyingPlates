@@ -85,7 +85,7 @@ public class AmericanFoodAdapter extends RecyclerView.Adapter<AmericanFoodAdapte
                 foodItem.setName(modelFoods.get(position).getName());
                 foodItem.setPlace(modelFoods.get(position).getPlace());
                 foodItem.setQuantity(newValue);
-                foodItem.setPrice(modelFoods.get(position).getPrice()*newValue);
+                foodItem.setPrice(modelFoods.get(position).getPrice());
                 foodItem.setProductId(modelFoods.get(position).getProductId());
                 foodItem.setTotalPrice(modelFoods.get(position).getPrice()*newValue);
 

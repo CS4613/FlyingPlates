@@ -18,7 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class ViewDataBase extends AppCompatActivity {
+public class ViewProfileInformation extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private  FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
@@ -57,10 +57,10 @@ public class ViewDataBase extends AppCompatActivity {
     private void showData(DataSnapshot dataSnapshot) {
         for(DataSnapshot ds :dataSnapshot.getChildren())
         {
-        ProfileInformation profileInformation = new ProfileInformation();
-        profileInformation.setName(ds.child(userId).getValue(ProfileInformation.class).getName());
-        profileInformation.setAddress(ds.child(userId).getValue(ProfileInformation.class).getAddress());
-        profileInformation.setPhonenumber(ds.child(userId).getValue(ProfileInformation.class).getPhonenumber());
+        ProfileModel profileInformation = new ProfileModel();
+        profileInformation.setName(ds.child(userId).getValue(ProfileModel.class).getName());
+        profileInformation.setAddress(ds.child(userId).getValue(ProfileModel.class).getAddress());
+        profileInformation.setPhonenumber(ds.child(userId).getValue(ProfileModel.class).getPhonenumber());
 
             ArrayList<String> arrayList=new ArrayList<>();
             arrayList.add(profileInformation.getName());

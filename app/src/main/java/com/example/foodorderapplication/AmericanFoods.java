@@ -8,9 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 import java.util.ArrayList;
 import static com.example.foodorderapplication.AmericanFoodAdapter.modelStoreFoods;
+import static com.example.foodorderapplication.FinalCartPreview.temparraylist;
 //import static com.example.foodorderapplication.IndianCartActivity.temparraylist;
 
 public class AmericanFoods extends AppCompatActivity  {
@@ -30,22 +31,22 @@ public class AmericanFoods extends AppCompatActivity  {
         setContentView(R.layout.activity_american_foods);
         recyclerView = findViewById(R.id.rv);
         //check_indian = (Button) findViewById(R.id.checkout_indian);
-        mToolbar = findViewById(R.id.toolbar);
-        mToolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back_arrow));
+        AmericanFoods.cart_count = 0;
+       /* mToolbar = findViewById(R.id.toolbar);
+        mToolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp));
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // these lines of code for show the same  cart for future refrence
                 grandTotalplus = 0;
-                /*for (int i = 0; i < temparraylist.size(); i++) {
+                for (int i = 0; i < temparraylist.size(); i++) {
 
                 }
                 modelStoreFoods.addAll(temparraylist);
-                IndianFoods.cart_count = (temparraylist.size());*/
+                AmericanFoods.cart_count = (temparraylist.size());
                 finish();
             }
-        });
-        IndianFoods.cart_count = 0;
+        });*/
         foodsList = new ArrayList<>();
         foodsList.add(new ModelFood(R.drawable.crispychicenburger_a1, "Chicken Burger", "Fast Foods", 4.99, 1, 20));
         foodsList.add(new ModelFood(R.drawable.bbqchickenpizza_a2, "Chicken Pizza", "Fast Foods", 5.99, 2, 20));
@@ -58,6 +59,5 @@ public class AmericanFoods extends AppCompatActivity  {
         AmericanFoodAdapter foodAdapter = new AmericanFoodAdapter(this, foodsList);
         recyclerView.setAdapter(foodAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
     }
 }

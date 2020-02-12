@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -80,12 +81,18 @@ public class IndianFoodAdapter extends RecyclerView.Adapter<IndianFoodAdapter.Vi
         holder.elegantNumberButton.setOnValueChangeListener(new ElegantNumberButton.OnValueChangeListener() {
             @Override
             public void onValueChange(ElegantNumberButton view, int oldValue, int newValue) {
+                if(newValue==1) {
+                    Toast.makeText(view.getContext(), newValue + " item added to cart", Toast.LENGTH_LONG).show();
+                }
+                if(newValue>1) {
+                    Toast.makeText(view.getContext(), newValue + " items added to cart", Toast.LENGTH_LONG).show();
+                }
                 foodItem =new ModelStoreFood();
                 foodItem.setImage(modelFoods.get(position).getImage());
                 foodItem.setName(modelFoods.get(position).getName());
                 foodItem.setPlace(modelFoods.get(position).getPlace());
                 foodItem.setQuantity(newValue);
-                foodItem.setPrice(modelFoods.get(position).getPrice()*newValue);
+                foodItem.setPrice(modelFoods.get(position).getPrice());
                 foodItem.setProductId(modelFoods.get(position).getProductId());
                 foodItem.setTotalPrice(modelFoods.get(position).getPrice()*newValue);
 

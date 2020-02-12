@@ -10,6 +10,7 @@
     tools:context=".AmericanFoods"
 
     >
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,12 +19,13 @@
         android:theme="@style/AppTheme"
         >
         <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar" />
-
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="match_parent"
             android:fitsSystemWindows="true"
             app:contentScrim="@color/colorAccent"
             app:expandedTitleTextAppearance="@android:color/transparent"
@@ -39,26 +41,19 @@
                 android:fitsSystemWindows="true"
                 android:scaleType="centerCrop"
                 />
-
         </com.google.android.material.appbar.CollapsingToolbarLayout>
-
     </com.google.android.material.appbar.AppBarLayout>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
-        android:clipToPadding="true"
+        android:fastScrollEnabled="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/rv">
         </androidx.recyclerview.widget.RecyclerView>
-
-
     </androidx.core.widget.NestedScrollView>
-
     <!-- <FrameLayout
          xmlns:android="http://schemas.android.com/apk/res/android"
          xmlns:app="http://schemas.android.com/apk/res-auto"

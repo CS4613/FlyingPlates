@@ -1,16 +1,16 @@
 package com.example.foodorderapplication;
 
-public class ProfileInformation
+public class ProfileModel
 {
     public String name;
     public String address;
     public int phonenumber;
 
-    public ProfileInformation()
+    public ProfileModel()
     {
     }
 
-    public ProfileInformation(String name, String address, int phonenumber) {
+    public ProfileModel(String name, String address, int phonenumber) {
         this.name = name;
         this.address = address;
         this.phonenumber = phonenumber;

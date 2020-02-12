@@ -9,7 +9,6 @@
     android:paddingRight="16dp"
     android:paddingBottom="16dp"
     android:orientation="vertical"
-    android:background="@drawable/fg"
     tools:context=".SignUpActivity">
 
     <LinearLayout

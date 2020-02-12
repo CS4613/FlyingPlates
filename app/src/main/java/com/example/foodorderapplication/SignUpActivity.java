@@ -38,11 +38,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         textview=(TextView)findViewById(R.id.Signin);
         button.setOnClickListener(this);
         textview.setOnClickListener(this);
-        if(firebaseAuth.getCurrentUser()!=null)
-        {
-            finish();
-            startActivity(new Intent(getApplicationContext(),ProfileToggle.class));
-        }
+
     }
     private void registerUser()
     {
@@ -67,7 +63,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 if(task.isSuccessful())
                 {
                         finish();
-                        startActivity(new Intent(getApplicationContext(), ProfileToggle.class));
+                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 }
                 else
                 {

@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fg"
-    tools:context=".ProfileToggle"
+    tools:context=".SaveProfileInformation"
     >
 
 
@@ -39,17 +38,6 @@
             android:text="Edit Information"
             android:layout_gravity="center_horizontal"
             />
-
-
-
-        <Button
-            android:id="@+id/buttonSignOut"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SignOut"
-            android:layout_gravity="center_horizontal"
-            />
-
     </LinearLayout>
 
 </RelativeLayout>

@@ -6,6 +6,8 @@
         <item name="colorPrimary">#37372f</item>
         <item name="colorPrimaryDark">#925b22</item>
         <item name="colorAccent">#deae3e</item>
+        <item name="cc_tv_background_color">#ff007f</item>
+        <item name="cc_is_animate_layout">true</item>
     </style>
 
 
