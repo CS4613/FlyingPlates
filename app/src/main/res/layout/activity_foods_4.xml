@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    >
+
+    <LinearLayout
+        android:weightSum="10"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/item_image_italian1"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="128dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/basil_blur_close_up_i01"
+            />
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item_name_italian1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="Food Name"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/item_place_italian1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food Place"
+                android:textSize="14sp"
+                />
+            <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                android:layout_width="110dp"
+                android:layout_height="40dp"
+                android:id="@+id/number_button"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="18dp"
+                app:textSize="9sp"
+                app:backGroundColor="@color/colorAccent"
+                app:initialNumber="0"
+                app:finalNumber="5"
+                />
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/item_price_italian"
+            android:text="$ price"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:layout_weight="2"
+            android:background="@drawable/capsule"
+            />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

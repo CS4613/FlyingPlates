@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShippingDetails">
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="100dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Enter Shipping Details"
+                android:id="@+id/textProfile"
+                android:gravity="left"/>
+            <EditText
+                android:id="@+id/TextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Your Name"
+                android:layout_margin="15dp"/>
+            <EditText
+                android:id="@+id/textAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your address"
+                android:layout_margin="15dp"/>
+            <EditText
+                android:id="@+id/textPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your PhoneNumber"
+                android:layout_margin="15dp"/>
+            <EditText
+                android:id="@+id/textZipCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter your ZipCode"
+                android:layout_margin="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Promotional Codes"
+                android:id="@+id/textCoupon"
+                />
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_height="wrap_content" android:orientation="horizontal"
+                android:layout_width="fill_parent">
+                <EditText
+                    android:id="@+id/coupon"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter your Coupon Code"
+                    android:layout_width="fill_parent">
+                </EditText>
+                <Button  android:text="Enter"
+                    android:id="@+id/Enter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Button>
+            </LinearLayout>
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="*"> <!-- stretch the second column of the layout-->
+
+                <!-- first row of the table layout-->
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- first element of the row-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="18dip"
+                        android:text="Amount"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TotalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="18dip"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <!-- first element of the row-->
+                    <TextView
+                        android:id="@+id/coupon_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="18dip"
+                        android:text="Promotional Discount"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/TotalPromotionalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="18dip"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="18dip"
+                        android:text="Total Amount"
+                        android:textColor="#000"
+                        android:textSize="12dp" />
+                    <TextView
+                        android:id="@+id/TotalFinalAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="18dip"
+                        android:textColor="#000"
+                        android:textSize="14dp" />
+                </TableRow>
+            </TableLayout>
+            </LinearLayout>
+
+    <Button
+        android:id="@+id/proceed_to_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proceed To CheckOut"
+        android:layout_alignParentBottom="true"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        />
+    <LinearLayout
+        android:id="@+id/proceed_to_book"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        android:layout_weight=".2">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="PROCEED"
+            android:textColor="#fff"
+            android:gravity="right|center_vertical"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:padding="15dp"/>
+
+        <TextView
+            android:padding="15dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/grand_total_cart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Rs. 3400"
+            android:textSize="24sp"
+            android:textColor="#fff"
+            android:gravity="left|center_vertical"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
