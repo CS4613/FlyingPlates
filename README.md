@@ -7,16 +7,16 @@ With the increasing popularity of food delivery in colleges and universities, th
 ***
 # Project Features
 1. Google firebase mobile authentication for user sign-in/ signup.
-2.Material Navigation Drawer and Fragments for Home,Orders,Profile and Signout.
-3.Different types of food menu using GridLayout.
-4.Different types of food under a menu item using material ui.
-5.Details about food and add to Cart option.
-6.Promtional page for redeeming coupons.
-7.Payment page with braintree payment integration.
-8.Used google firebase database to perform crud operations with data related to cart information, payment details and orders.
-9.Place order and store the order details in Firebase.
-10.User will get notification after placing the order successfully
-11.Display order details
+2. Material Navigation Drawer and Fragments for Home,Orders,Profile and Signout.
+3. Different types of food menu using GridLayout.
+4. Different types of food under a menu item using material ui.
+5. Details about food and add to Cart option.
+6. Promtional page for redeeming coupons.
+7. Payment page with braintree payment integration.
+8. Used google firebase database to perform crud operations with data related to cart information, payment details and orders.
+9. Place order and store the order details in Firebase.
+10. User will get notification after placing the order successfully
+11. Display order details
 ***
 # Development Tools &Technologies
 * Java
@@ -31,8 +31,8 @@ With the increasing popularity of food delivery in colleges and universities, th
 * Firebase
 ***
 # Using Library
-1.MaterialEditText : For responsiv EditText design
-2.Elegant Number Button : Implement a number counter with increment and decrement buttons.
-3.TextDrawable : This light-weight library provides images with letter/text like the Gmail app.
+1. MaterialEditText : For responsiv EditText design
+2. Elegant Number Button : Implement a number counter with increment and decrement buttons.
+3. TextDrawable : This light-weight library provides images with letter/text like the Gmail app.
 ***
 
