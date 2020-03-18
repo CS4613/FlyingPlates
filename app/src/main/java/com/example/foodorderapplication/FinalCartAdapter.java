@@ -21,15 +21,11 @@ import static com.example.foodorderapplication.FinalCartPreview.grandTotalplus;
 
 
 
-/**
- * Created by Deependra Singh Patel on 8/5/19.
- */
+
 public class FinalCartAdapter extends RecyclerView.Adapter<FinalCartAdapter.ViewHolder> {
 
     public static  ArrayList<ModelStoreFood> modelStoreFoods;
     Context context;
-    private CallBackUs mCallBackus;
-    private HomeCallBack homeCallBack;
 
     public FinalCartAdapter(ArrayList<ModelStoreFood> modelStoreFoods, Context context) {
         this.context = (Context) context;
@@ -46,7 +42,6 @@ public class FinalCartAdapter extends RecyclerView.Adapter<FinalCartAdapter.View
 
     @Override
     public void onBindViewHolder(final FinalCartAdapter.ViewHolder holder, final int position) {
-        // holder.productCartImage.setImageResource(R.drawable.burger);
         holder.productCartPrice.setText(String.valueOf("$"+modelStoreFoods.get(position).getPrice()));
         holder.productCartCode.setText(modelStoreFoods.get(position).getName());
         holder.productCartQuantity.setText(String.valueOf(modelStoreFoods.get(position).getQuantity()));
@@ -58,9 +53,6 @@ public class FinalCartAdapter extends RecyclerView.Adapter<FinalCartAdapter.View
                 .setDefaultRequestOptions(requestOptions)
                 .load(modelStoreFoods.get(position).getImage()).into(holder.productCartImage);
         holder.productCartImage.setImageResource(modelStoreFoods.get(position).getImage());
-
-        //for remove single item in cart and update the total value and list
-
 
         holder.deleteItem.setOnClickListener(new View.OnClickListener() {
             @Override

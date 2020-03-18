@@ -1,63 +1,56 @@
-
 package com.example.foodorderapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.view.MenuItem;
 import android.widget.TextView;
 import androidx.appcompat.widget.Toolbar;
+
+
 import java.util.ArrayList;
-import static com.example.foodorderapplication.AmericanFoodAdapter.modelStoreFoods;
-import static com.example.foodorderapplication.FinalCartPreview.temparraylist;
-//import static com.example.foodorderapplication.IndianCartActivity.temparraylist;
+
 
 public class AmericanFoods extends AppCompatActivity  {
     RecyclerView recyclerView;
-    Button check_indian;
     TextView textView;
-    private Toolbar mToolbar;
     RecyclerView.LayoutManager rvlayoutManager;
-    public static double grandTotalplus;
-    public static int cart_count = 0;
     public static ArrayList<ModelFood> foodsList = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_american_foods);
         recyclerView = findViewById(R.id.rv);
-        //check_indian = (Button) findViewById(R.id.checkout_indian);
-        AmericanFoods.cart_count = 0;
-       /* mToolbar = findViewById(R.id.toolbar);
-        mToolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp));
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // these lines of code for show the same  cart for future refrence
-                grandTotalplus = 0;
-                for (int i = 0; i < temparraylist.size(); i++) {
-
-                }
-                modelStoreFoods.addAll(temparraylist);
-                AmericanFoods.cart_count = (temparraylist.size());
-                finish();
-            }
-        });*/
+        Toolbar toolbar = (Toolbar) findViewById(R.id.total_main_bar);
+        toolbar.setTitle("Home");
+        setSupportActionBar(toolbar);
+        ActionBar ab = getSupportActionBar();
+        if (ab != null) {
+            ab.setDisplayHomeAsUpEnabled(true);
+        } else {
+            throw new NullPointerException("Something went wrong");
+        }
         foodsList = new ArrayList<>();
         foodsList.add(new ModelFood(R.drawable.crispychicenburger_a1, "Chicken Burger", "Fast Foods", 4.99, 1, 20));
         foodsList.add(new ModelFood(R.drawable.bbqchickenpizza_a2, "Chicken Pizza", "Fast Foods", 5.99, 2, 20));
         foodsList.add(new ModelFood(R.drawable.frenchfries_a3, "French Fries", "Fast Foods", 6.99, 3, 20));
         foodsList.add(new ModelFood(R.drawable.chickennuggets_a4, "Chicken Nuggets", "Fast Foods", 9.99, 4, 20));
         foodsList.add(new ModelFood(R.drawable.waldrofsalad_a5, "Waldrof salads", "Fast Foods", 5.99, 5, 20));
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setHasFixedSize(true);
         rvlayoutManager = new LinearLayoutManager(this);
         AmericanFoodAdapter foodAdapter = new AmericanFoodAdapter(this, foodsList);
         recyclerView.setAdapter(foodAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent myIntent = new Intent(getApplicationContext(), HomeDashBoard.class);
+        startActivityForResult(myIntent, 0);
+        return true;
+
     }
 }

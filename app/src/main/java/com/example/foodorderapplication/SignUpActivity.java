@@ -29,7 +29,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_signup);
         progressDialog = new ProgressDialog(this);
         firebaseAuth = FirebaseAuth.getInstance();
         button=(Button)findViewById(R.id.register);
@@ -62,12 +62,16 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 progressDialog.dismiss();
                 if(task.isSuccessful())
                 {
-                        finish();
-                        startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                    finish();
+                    Toast.makeText(getApplicationContext(),"Registration Successful",Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(getApplicationContext(), LoginActivity.class));
                 }
                 else
                 {
                     Toast.makeText(SignUpActivity.this,"Could Not Register, Please try again",Toast.LENGTH_SHORT).show();
+                    email.setText("");
+                    password.setText("");
+                    return;
                 }
                 progressDialog.dismiss();
             }

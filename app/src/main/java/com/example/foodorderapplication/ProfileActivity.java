@@ -51,6 +51,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
     {
         String name=username.getText().toString().trim();
         String addressdata=address.getText().toString().trim();
+        String value = phonenumber.getText().toString().trim();
         int number=Integer.parseInt(phonenumber.getText().toString().trim());
         if(TextUtils.isEmpty(name))
         {
@@ -70,7 +71,6 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         }
         ProfileModel profileInformation=new ProfileModel(name,addressdata,number);
         FirebaseUser eUser=firebaseAuth.getCurrentUser();
-        //databaseReference.push().setValue("value");
         databaseReference.child(eUser.getUid()).setValue(profileInformation);
         if(databaseReference!=null&&!name.isEmpty()&&!addressdata.isEmpty()) {
             Toast.makeText(this, "Information Saved....", Toast.LENGTH_LONG).show();

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fg"
+    android:background="@drawable/background"
     tools:context=".LoginActivity">
 
     <LinearLayout
@@ -40,6 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
+            android:background="@drawable/round_button"
             android:text="SIGNIN"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:visibility="visible" />

@@ -13,7 +13,7 @@
         />
     <com.braintreepayments.cardform.view.CardForm
         android:id="@+id/card_form"
-        android:paddingTop="50dp"
+        android:paddingTop="70dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 <Button
@@ -28,6 +28,5 @@
     android:layout_marginTop="10dp"
     android:textColor="@android:color/white"
     android:background="@color/colorPrimary"
-
     />
 </RelativeLayout>

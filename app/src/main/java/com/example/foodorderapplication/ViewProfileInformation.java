@@ -32,7 +32,6 @@ public class ViewProfileInformation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_database_layout);
         listView=(ListView)findViewById(R.id.listview);
-
         mAuth=FirebaseAuth.getInstance();
         firebaseDatabase= FirebaseDatabase.getInstance();
         databaseReference =firebaseDatabase.getReference();

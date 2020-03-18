@@ -1,14 +1,18 @@
 
 package com.example.foodorderapplication;
 
+        import androidx.appcompat.app.ActionBar;
         import androidx.appcompat.app.AppCompatActivity;
         import androidx.recyclerview.widget.LinearLayoutManager;
         import androidx.recyclerview.widget.RecyclerView;
+
+        import android.content.Intent;
         import android.os.Bundle;
+        import android.view.MenuItem;
         import android.view.View;
         import android.widget.Button;
         import android.widget.TextView;
-        import android.widget.Toolbar;
+        import androidx.appcompat.widget.Toolbar;
         import java.util.ArrayList;
         import static com.example.foodorderapplication.IndianFoodAdapter.modelStoreFoods;
         //import static com.example.foodorderapplication.IndianCartActivity.temparraylist;
@@ -19,8 +23,6 @@ public class IndianFoods extends AppCompatActivity  {
     TextView textView;
     private Toolbar mToolbar;
     RecyclerView.LayoutManager rvlayoutManager;
-    public static double grandTotalplus;
-    public static int cart_count = 0;
     public static ArrayList<ModelFood> foodsList = new ArrayList<>();
 
     @Override
@@ -30,22 +32,16 @@ public class IndianFoods extends AppCompatActivity  {
         setContentView(R.layout.activity_indian_foods);
         recyclerView = findViewById(R.id.rv_indian);
         //check_indian = (Button) findViewById(R.id.checkout_indian);
-        mToolbar = findViewById(R.id.toolbar);
-        mToolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back_arrow));
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // these lines of code for show the same  cart for future refrence
-                grandTotalplus = 0;
-                /*for (int i = 0; i < temparraylist.size(); i++) {
-
-                }
-                modelStoreFoods.addAll(temparraylist);
-                IndianFoods.cart_count = (temparraylist.size());*/
-                finish();
-            }
-        });
-        IndianFoods.cart_count = 0;
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.total_main_bar);
+        toolbar.setTitle("Home");
+        setSupportActionBar(toolbar);
+        ActionBar ab = getSupportActionBar();
+        //mToolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_arrow_back_black_24dp));
+        if (ab != null) {
+            ab.setDisplayHomeAsUpEnabled(true);
+        } else {
+            throw new NullPointerException("Something went wrong");
+        }
         foodsList = new ArrayList<>();
         foodsList.add(new ModelFood(R.drawable.chickenbiryani_ind01, "Chicken Biryani", "Indian Foods", 12.99, 6, 20));
         foodsList.add(new ModelFood(R.drawable.redlentildal_ind02, "Red Lentil Dal", "Indian Foods", 9.99, 7, 20));
@@ -58,6 +54,14 @@ public class IndianFoods extends AppCompatActivity  {
         IndianFoodAdapter foodAdapter = new IndianFoodAdapter(this, foodsList);
         recyclerView.setAdapter(foodAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent myIntent = new Intent(getApplicationContext(), HomeDashBoard.class);
+        startActivityForResult(myIntent, 0);
+        return true;
 
     }
 }

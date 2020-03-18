@@ -16,10 +16,6 @@ import android.widget.GridLayout;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-
-/**
- * A simple {@link Fragment} subclass.
- */
 public class HomeFragment extends Fragment {
 
 

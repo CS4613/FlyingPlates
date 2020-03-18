@@ -6,21 +6,23 @@
     app:layoutManager="android.support.v7.widget.LinearLayoutManager"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:context=".IndianFoods"
 
     >
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
         android:background="@android:color/white"
         android:theme="@style/AppTheme"
         >
-        <include
-            android:id="@+id/toolbar"
-            layout="@layout/toolbar" />
-
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/total_main_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="center_horizontal"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:background="@color/colorPrimaryDark"
+            />
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="250dp"

@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Enter Shipping Details"
+                android:text="Contact Details"
                 android:id="@+id/textProfile"
                 android:gravity="left"/>
             <EditText
@@ -43,12 +43,14 @@
                 android:id="@+id/textPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:hint="Enter your PhoneNumber"
                 android:layout_margin="15dp"/>
             <EditText
                 android:id="@+id/textZipCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:inputType="number"
                 android:hint="Enter your ZipCode"
                 android:layout_margin="15dp"/>
             <TextView
@@ -121,7 +123,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="18dip"
-                        android:textColor="#000"
+                        android:textColor="#FF0000"
                         android:textSize="14dp" />
                 </TableRow>
                 <TableRow
@@ -144,8 +146,40 @@
                 </TableRow>
             </TableLayout>
             </LinearLayout>
+    <LinearLayout
+        android:id="@+id/proceed_to_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_weight=".2">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="PROCEED "
+            android:textColor="#fff"
+            android:gravity="right|center_vertical"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:padding="15dp"/>
 
-    <Button
+        <TextView
+            android:padding="15dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/shipping_total_cart"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="$0"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:gravity="left|center_vertical"
+            android:textStyle="bold"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+    <!--<Button
         android:id="@+id/proceed_to_checkout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -154,37 +188,6 @@
         android:textColor="@android:color/white"
         android:background="@color/colorPrimary"
         />
-    <LinearLayout
-        android:id="@+id/proceed_to_book"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_gravity="bottom"
-        android:background="@color/colorPrimary"
-        android:layout_weight=".2">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="PROCEED"
-            android:textColor="#fff"
-            android:gravity="right|center_vertical"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:padding="15dp"/>
 
-        <TextView
-            android:padding="15dp"
-            android:layout_marginLeft="5dp"
-            android:id="@+id/grand_total_cart"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="Rs. 3400"
-            android:textSize="24sp"
-            android:textColor="#fff"
-            android:gravity="left|center_vertical"
-            android:textStyle="bold"
-            android:layout_marginRight="10dp"/>
-    </LinearLayout>
-
+-->
 </RelativeLayout>

@@ -6,9 +6,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".FinalCartPreview">
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/total_main_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="center_horizontal"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:background="@color/colorPrimaryDark"
+        />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_cart"

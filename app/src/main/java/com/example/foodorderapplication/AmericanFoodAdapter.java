@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,6 +18,7 @@ import static com.example.foodorderapplication.FinalCartPreview.finalarray;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+
 
 public class AmericanFoodAdapter extends RecyclerView.Adapter<AmericanFoodAdapter.ViewHolder> implements  View.OnClickListener{
     ItemClickListener itemClickListener;
@@ -54,7 +56,7 @@ public class AmericanFoodAdapter extends RecyclerView.Adapter<AmericanFoodAdapte
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.activity_foods_1,parent,false);
-        ViewHolder viewHolder = new ViewHolder(view);
+      ViewHolder viewHolder = new ViewHolder(view);
         return viewHolder;
     }
 
@@ -80,6 +82,12 @@ public class AmericanFoodAdapter extends RecyclerView.Adapter<AmericanFoodAdapte
         holder.elegantNumberButton.setOnValueChangeListener(new ElegantNumberButton.OnValueChangeListener() {
             @Override
             public void onValueChange(ElegantNumberButton view, int oldValue, int newValue) {
+                if(newValue==1) {
+                    Toast.makeText(view.getContext(), newValue + " item added to cart", Toast.LENGTH_LONG).show();
+                }
+                if(newValue>1) {
+                    Toast.makeText(view.getContext(), newValue + " items added to cart", Toast.LENGTH_LONG).show();
+                }
                 foodItem =new ModelStoreFood();
                 foodItem.setImage(modelFoods.get(position).getImage());
                 foodItem.setName(modelFoods.get(position).getName());

@@ -1,26 +1,22 @@
 
 package com.example.foodorderapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.view.MenuItem;
 import android.widget.TextView;
-import android.widget.Toolbar;
 import java.util.ArrayList;
-import static com.example.foodorderapplication.AmericanFoodAdapter.modelStoreFoods;
-//import static com.example.foodorderapplication.IndianCartActivity.temparraylist;
+
 
 public class ChineseFoods extends AppCompatActivity  {
     RecyclerView recyclerView;
-    Button check_indian;
     TextView textView;
-    private Toolbar mToolbar;
     RecyclerView.LayoutManager rvlayoutManager;
-    public static double grandTotalplus;
-    public static int cart_count = 0;
     public static ArrayList<ModelFood> foodsList = new ArrayList<>();
 
     @Override
@@ -29,23 +25,16 @@ public class ChineseFoods extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chinese_foods);
         recyclerView = findViewById(R.id.rv);
-        //check_indian = (Button) findViewById(R.id.checkout_indian);
-        mToolbar = findViewById(R.id.toolbar);
-        mToolbar.setNavigationIcon(getResources().getDrawable(R.drawable.ic_back_arrow));
-        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // these lines of code for show the same  cart for future refrence
-                grandTotalplus = 0;
-                /*for (int i = 0; i < temparraylist.size(); i++) {
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.total_main_bar);
+        toolbar.setTitle("Home");
+        setSupportActionBar(toolbar);
+        ActionBar ab = getSupportActionBar();
+        if (ab != null) {
+            ab.setDisplayHomeAsUpEnabled(true);
+        } else {
+            throw new NullPointerException("Something went wrong");
+        }
 
-                }
-                modelStoreFoods.addAll(temparraylist);
-                IndianFoods.cart_count = (temparraylist.size());*/
-                finish();
-            }
-        });
-        ChineseFoods.cart_count = 0;
         foodsList = new ArrayList<>();
         foodsList.add(new ModelFood(R.drawable.chickenmanchuria_c01, "Chicken Manchuria", "Fast Foods", 8.99, 17, 20));
         foodsList.add(new ModelFood(R.drawable.chickennoodles_c02, "Chicken Noodles", "Fast Foods", 7.99, 18, 20));
@@ -56,6 +45,13 @@ public class ChineseFoods extends AppCompatActivity  {
         ChineseFoodAdapter foodAdapter = new ChineseFoodAdapter(this, foodsList);
         recyclerView.setAdapter(foodAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent myIntent = new Intent(getApplicationContext(), HomeDashBoard.class);
+        startActivityForResult(myIntent, 0);
+        return true;
 
     }
 }

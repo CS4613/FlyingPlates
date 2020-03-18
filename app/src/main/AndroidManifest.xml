@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.foodorderapplication">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OrderConfirmationPage"></activity>
+        <activity android:name=".MyOrders"></activity>
+        <activity android:name=".OrderConfirmationPage" />
         <activity android:name=".ShippingDetails" />
         <activity android:name=".BookMyOrder" />
         <activity android:name=".JapaneseFoods" />
@@ -20,17 +23,13 @@
         <activity android:name=".FinalCartPreview" />
         <activity android:name=".MexicanFoods" />
         <activity android:name=".IndianFoods" />
-        <activity android:name=".AmericanFoods"
-                  android:parentActivityName=".HomeDashBoard"
-                  android:label="Home"
-                  android:theme="@style/AppTheme.NoActionBar"
-
-            />
+        <activity android:name=".AmericanFoods" />
         <activity android:name=".HomeDashBoard" />
         <activity android:name=".SaveProfileInformation" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".SignUpActivity">
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".UserChooseActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,11 +37,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewProfileInformation" />
-
-
-
-    />
-
     </application>
 
 </manifest>

@@ -75,7 +75,7 @@ public class HomeDashBoard extends AppCompatActivity implements FinalCartAdapter
 
                 } else if (id == R.id.nav_orders) {
 
-                    Intent intent = new Intent(HomeDashBoard.this, FinalCartPreview.class);
+                    Intent intent = new Intent(HomeDashBoard.this, MyOrders.class);
                     startActivity(intent);
 
                 } else if (id == R.id.nav_profile) {
@@ -107,10 +107,8 @@ public class HomeDashBoard extends AppCompatActivity implements FinalCartAdapter
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         MenuItem menuItem = menu.findItem(R.id.action_addcart);
-        //menuItem.setIcon(Converter.convertLayoutToImage(HomeDashBoard.this, cart_count, R.drawable.ic_shopping_cart_white_24dp));
         return true;
 
     }
