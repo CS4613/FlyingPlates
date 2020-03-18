@@ -38,11 +38,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".ViewProfileInformation" />
-
-
-
-    />
-
     </application>
 
 </manifest>
