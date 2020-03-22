@@ -121,6 +121,11 @@ public class ShippingDetails extends AppCompatActivity {
                     return;
                 }
                 String shipping_phonenumber= phonenumber.getText().toString().trim();
+                if(shipping_phonenumber.length()>10)
+                {
+                    Toast.makeText(getApplicationContext(),"Please enter a valid mobile number",Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 if(TextUtils.isEmpty(shipping_phonenumber))
                 {
                     Toast.makeText(getApplicationContext(),"Please enter your mobile number",Toast.LENGTH_SHORT).show();
