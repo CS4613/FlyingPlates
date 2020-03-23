@@ -1,6 +1,8 @@
 package com.example.foodorderapplication;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -47,6 +49,17 @@ public class ShippingDetails extends AppCompatActivity {
         total_amount.setText("$"+grandTotalplus);
         amount.setText("$"+grandTotalplus);
         shipping_amount.setText("$"+grandTotalplus);
+
+  /*      Toolbar toolbar = (Toolbar) findViewById(R.id.total_main_bar);
+        toolbar.setTitle("Home");
+        setSupportActionBar(toolbar);
+        ActionBar ab = getSupportActionBar();
+        if (ab != null) {
+            ab.setDisplayHomeAsUpEnabled(true);
+        } else {
+            throw new NullPointerException("Something went wrong");
+        }
+*/
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,7 +116,6 @@ public class ShippingDetails extends AppCompatActivity {
                 }
             }
         });
-
         placeorder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -132,21 +144,19 @@ public class ShippingDetails extends AppCompatActivity {
                     return;
                 }
                 String shipping_zipcode = zipcode.getText().toString().trim();
-                if(TextUtils.isEmpty(shipping_zipcode))
-                {
-                    Toast.makeText(getApplicationContext(),"Please enter your zipcode",Toast.LENGTH_SHORT).show();
+                if(TextUtils.isEmpty(shipping_zipcode)) {
+                    Toast.makeText(getApplicationContext(), "Please enter your zipcode", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                OrderModel orderModel=new OrderModel(shipping_name,shipping_address,shipping_phonenumber,shipping_zipcode);
-                BookMyOrderModel bookMyOrderModel = new BookMyOrderModel();
+                OrderModel orderModel = new OrderModel(shipping_name,shipping_address,shipping_phonenumber,shipping_zipcode);
                 orderModel.setName(shipping_name);
                 orderModel.setAddress(shipping_address);
                 orderModel.setPhonenumber(shipping_phonenumber);
                 orderModel.setPincode(shipping_zipcode);
-                bookMyOrderModel.setName(shipping_name);
-                bookMyOrderModel.setAddress(shipping_address);
-                bookMyOrderModel.setPhonenumber(shipping_phonenumber);
-                bookMyOrderModel.setPincode(shipping_zipcode);
+               /* BookMyOrderModel.name = shipping_name;
+                BookMyOrderModel.address = shipping_address;
+                BookMyOrderModel.phonenumber = shipping_phonenumber;
+                BookMyOrderModel.pincode = shipping_zipcode;*/
                 startActivity(new Intent(getApplicationContext(),BookMyOrder.class));
             }
         });

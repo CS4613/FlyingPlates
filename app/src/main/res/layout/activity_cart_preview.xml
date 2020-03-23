@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".FinalCartPreview">
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/total_main_bar"
         android:layout_width="match_parent"
@@ -15,7 +14,6 @@
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         android:background="@color/colorPrimaryDark"
         />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_cart"
         android:layout_width="match_parent"
@@ -41,7 +39,6 @@
             android:textStyle="bold"
             android:textSize="24sp"
             android:padding="15dp"/>
-
         <TextView
             android:padding="15dp"
             android:layout_marginLeft="5dp"
@@ -49,12 +46,11 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="Rs. 3400"
+            android:text="$0"
             android:textSize="24sp"
             android:textColor="#fff"
             android:gravity="left|center_vertical"
             android:textStyle="bold"
             android:layout_marginRight="10dp"/>
     </LinearLayout>
-
 </LinearLayout>

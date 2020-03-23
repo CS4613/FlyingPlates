@@ -15,12 +15,12 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MyOrders"></activity>
         <activity android:name=".OrderConfirmationPage" />
-        <activity android:name=".ShippingDetails" />
+        <activity android:name=".ShippingDetails"  />
         <activity android:name=".BookMyOrder" />
         <activity android:name=".JapaneseFoods" />
         <activity android:name=".ChineseFoods" />
         <activity android:name=".ItalianFoods" />
-        <activity android:name=".FinalCartPreview" />
+        <activity android:name=".FinalCartPreview"/>
         <activity android:name=".MexicanFoods" />
         <activity android:name=".IndianFoods" />
         <activity android:name=".AmericanFoods" />

@@ -5,24 +5,21 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.Animatable;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import static com.example.foodorderapplication.FinalCartPreview.temparraylist;
-
-import java.util.ArrayList;
-
+import static com.example.foodorderapplication.HomeDashBoard.finalquanitity;
+import static com.example.foodorderapplication.BookMyOrderModel.name;
+import static com.example.foodorderapplication.BookMyOrderModel.address;
+import static com.example.foodorderapplication.BookMyOrderModel.pincode;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -34,6 +31,7 @@ public class OrderConfirmationPage extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
     private String userId;
     private ListView listView;
+    private TextView totalquantity_Edittext,address;
 
     @Bind(R.id.checkImageView)
     ImageView checkMarkImageView;
@@ -47,10 +45,14 @@ public class OrderConfirmationPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_confirmation_page);
-
+        totalquantity_Edittext = (TextView) findViewById(R.id.textView26);
+        address = (TextView)findViewById(R.id.textView27);
         ButterKnife.bind(this);
-
-
+        String name = OrderModel.name;
+        String address_model = OrderModel.address;
+        String pincode = OrderModel.pincode;
+        totalquantity_Edittext.setText(finalquanitity+" items will be delivered to");
+        address.setText(name+","+address_model+","+pincode);
     }
     public static void start(Context context) {
         Intent intent = new Intent(context, OrderConfirmationPage.class);
@@ -59,7 +61,6 @@ public class OrderConfirmationPage extends AppCompatActivity {
         //Animate new activity from bottom
         ((Activity) context).overridePendingTransition(R.anim.slide_in_up, R.anim.hold);
     }
-
     int longestAnimationTime = 1000; //milliseconds, circle animation time defined in XML
 
     @Override

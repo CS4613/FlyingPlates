@@ -11,7 +11,14 @@
         android:layout_height="match_parent"
         />
 
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/total_main_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_gravity="center_horizontal"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:background="@color/colorPrimaryDark"
+        />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -24,9 +31,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Contact Details"
+                android:text="   Contact Details"
                 android:id="@+id/textProfile"
-                android:gravity="left"/>
+                />
             <EditText
                 android:id="@+id/TextName"
                 android:layout_width="match_parent"
@@ -57,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Promotional Codes"
+                android:text="   Promotional Codes"
                 android:id="@+id/textCoupon"
                 />
 
@@ -67,12 +74,14 @@
                 <EditText
                     android:id="@+id/coupon"
                     android:layout_height="wrap_content"
+                    android:padding="15dp"
                     android:layout_weight="1"
                     android:hint="Enter your Coupon Code"
                     android:layout_width="fill_parent">
                 </EditText>
                 <Button  android:text="Enter"
                     android:id="@+id/Enter"
+                    android:background="@drawable/capsule"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
                 </Button>
@@ -179,15 +188,4 @@
             android:textStyle="bold"
             android:layout_marginRight="10dp"/>
     </LinearLayout>
-    <!--<Button
-        android:id="@+id/proceed_to_checkout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Proceed To CheckOut"
-        android:layout_alignParentBottom="true"
-        android:textColor="@android:color/white"
-        android:background="@color/colorPrimary"
-        />
-
--->
 </RelativeLayout>

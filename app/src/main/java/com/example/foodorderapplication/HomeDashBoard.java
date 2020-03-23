@@ -33,6 +33,7 @@ public class HomeDashBoard extends AppCompatActivity implements FinalCartAdapter
 
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
+    public static int finalquanitity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -155,6 +156,7 @@ public class HomeDashBoard extends AppCompatActivity implements FinalCartAdapter
             }
             cart_count=finalarray.size();
         }
+        finalquanitity = FinalCartPreview.cart_count;
         actionView.setCount(FinalCartPreview.cart_count);
        // Toast.makeText(getApplicationContext(),"Cart Count"+FinalCartPreview.cart_count,Toast.LENGTH_LONG).show();
         itemData.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {

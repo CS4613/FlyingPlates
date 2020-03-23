@@ -42,7 +42,7 @@ public class FinalCartAdapter extends RecyclerView.Adapter<FinalCartAdapter.View
 
     @Override
     public void onBindViewHolder(final FinalCartAdapter.ViewHolder holder, final int position) {
-        holder.productCartPrice.setText(String.valueOf("$"+modelStoreFoods.get(position).getPrice()));
+        holder.productCartPrice.setText("$"+(modelStoreFoods.get(position).getPrice())*modelStoreFoods.get(position).getQuantity());
         holder.productCartCode.setText(modelStoreFoods.get(position).getName());
         holder.productCartQuantity.setText(String.valueOf(modelStoreFoods.get(position).getQuantity()));
         RequestOptions requestOptions = new RequestOptions();
@@ -74,9 +74,8 @@ public class FinalCartAdapter extends RecyclerView.Adapter<FinalCartAdapter.View
                     for (int i = 0; i < modelStoreFoods.size(); i++) {
                         grandTotalplus = grandTotalplus + modelStoreFoods.get((int) i).getPrice()*modelStoreFoods.get((int)i).getQuantity();
                     }
-
-                    Log.d("totalcashthegun", String.valueOf(grandTotalplus));
-                    grandTotal.setText(String.valueOf(grandTotalplus));
+                    grandTotalplus = Double.parseDouble(String.format("%.2f", grandTotalplus));
+                    grandTotal.setText("$ " + String.format("%.2f", grandTotalplus));
 
                 } else {
                     Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
@@ -104,14 +103,15 @@ public class FinalCartAdapter extends RecyclerView.Adapter<FinalCartAdapter.View
                 holder.productCartQuantity.setText(String.valueOf(modelStoreFoods.get(position).getQuantity()));
 
                 modelStoreFoods.get(position).setTotalPrice(cash);
-                holder.productCartPrice.setText(String.valueOf(cash));
+                holder.productCartPrice.setText("$"+String.valueOf(cash));
 
 
                 for (double i = 0; i < modelStoreFoods.size(); i++) {
                     grandTotalplus = grandTotalplus + modelStoreFoods.get((int) i).getPrice()*modelStoreFoods.get((int)i).getQuantity();
                 }
-                Log.d("totalcashthegun", String.valueOf(grandTotalplus));
-                grandTotal.setText(String.valueOf(grandTotalplus));
+                grandTotalplus = Double.parseDouble(String.format("%.2f", grandTotalplus));
+               // Log.d("totalcashthegun", String.valueOf(grandTotalplus));
+                grandTotal.setText("$ " + String.format("%.2f", grandTotalplus));
 
             }
 
@@ -138,13 +138,13 @@ public class FinalCartAdapter extends RecyclerView.Adapter<FinalCartAdapter.View
                     double cash = (modelStoreFoods.get(position).getPrice()) * (modelStoreFoods.get(position).getQuantity());
 
                     modelStoreFoods.get(position).setTotalPrice(cash);
-                    holder.productCartPrice.setText(String.valueOf(cash));
+                    holder.productCartPrice.setText("$"+String.valueOf(cash));
                     for (int i = 0; i < modelStoreFoods.size(); i++) {
                         grandTotalplus = grandTotalplus + modelStoreFoods.get((int) i).getPrice()*modelStoreFoods.get((int)i).getQuantity();
                     }
-
+                    grandTotalplus = Double.parseDouble(String.format("%.2f", grandTotalplus));
                     Log.d("totalcashthegun", String.valueOf(grandTotalplus));
-                    grandTotal.setText(String.valueOf(grandTotalplus));
+                    grandTotal.setText("$ " + String.format("%.2f", grandTotalplus));
 
                 }
             }

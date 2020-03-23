@@ -1,6 +1,7 @@
 package com.example.foodorderapplication;
 
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -13,6 +14,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class FinalCartPreview extends AppCompatActivity implements  FinalCartAdapter.HomeCallBack,FinalCartAdapter.CallBackUs{
@@ -72,8 +75,10 @@ public class FinalCartPreview extends AppCompatActivity implements  FinalCartAda
         for (int i = 0; i < temparraylist.size(); i++) {
             grandTotalplus = (grandTotalplus + temparraylist.get(i).getPrice() * temparraylist.get(i).getQuantity());
         }
+        grandTotalplus = Double.parseDouble(String.format("%.2f", grandTotalplus));
+
         Log.d("total", String.valueOf(grandTotalplus));
-        grandTotal.setText("$ " + String.valueOf(grandTotalplus));
+        grandTotal.setText("$ " + String.format("%.2f", grandTotalplus));
         cartRecyclerView = findViewById(R.id.recycler_view_cart);
         proceedToBook.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,14 +96,11 @@ public class FinalCartPreview extends AppCompatActivity implements  FinalCartAda
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         cartRecyclerView.setLayoutManager(mLayoutManager);
         cartRecyclerView.setAdapter(cartAdapter);
-
-
     }
     @Override
     public void updateCartCount(Context context) {
         invalidateOptionsMenu();
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -119,6 +121,7 @@ public class FinalCartPreview extends AppCompatActivity implements  FinalCartAda
         }
         finalarray.addAll(temparraylist);
     }
+
 
 }
 

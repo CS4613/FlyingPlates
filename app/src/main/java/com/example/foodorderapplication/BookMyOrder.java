@@ -70,10 +70,6 @@ public class BookMyOrder extends AppCompatActivity {
                         bookMyOrder.setcardCVV(cardForm.getCvv());
                         bookMyOrder.setCardpostalcode(cardForm.getPostalCode());
                         bookMyOrder.setTotalamount(grandTotalplus);
-    /*                    bookMyOrder.setImage(modelStoreFood.getImage());
-                        bookMyOrder.setProduct_name(modelStoreFood.getName());
-                        bookMyOrder.setPlace(modelStoreFood.getPlace());
-                        bookMyOrder.setProductId(modelStoreFood.getProductId());*/
                         databaseReference_Card.child(user.getUid()).setValue(bookMyOrder);
                         databaseReference_Cart.child(user.getUid()).setValue(temparraylist);
                         Toast.makeText(BookMyOrder.this, "Thank you for purchase", Toast.LENGTH_LONG).show();
