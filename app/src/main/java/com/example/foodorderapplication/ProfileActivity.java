@@ -32,7 +32,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         firebaseAuth=FirebaseAuth.getInstance();
-        databaseReference= FirebaseDatabase.getInstance().getReference().child("data");
+        databaseReference= FirebaseDatabase.getInstance().getReference("profile");
         if(firebaseAuth.getCurrentUser()==null)
         {
             finish();
@@ -46,13 +46,11 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         saveInformation=(Button)findViewById(R.id.saveInformation);
         saveInformation.setOnClickListener(this);
     }
-
     private void setSaveInformation()
     {
         String name=username.getText().toString().trim();
         String addressdata=address.getText().toString().trim();
         String value = phonenumber.getText().toString().trim();
-        int number=Integer.parseInt(phonenumber.getText().toString().trim());
         if(TextUtils.isEmpty(name))
         {
             Toast.makeText(this,"Please enter your name",Toast.LENGTH_SHORT).show();
@@ -64,16 +62,23 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
             return;
         }
 
-        if(TextUtils.isEmpty(Integer.toString(number)))
+        if(TextUtils.isEmpty(value))
         {
             Toast.makeText(this,"Please enter your mobile number",Toast.LENGTH_SHORT).show();
             return;
         }
-        ProfileModel profileInformation=new ProfileModel(name,addressdata,number);
+        ProfileModel profileInformation=new ProfileModel(name,addressdata,value);
+        profileInformation.setName(name);
+        profileInformation.setAddress(addressdata);
+        profileInformation.setPhonenumber(value);
         FirebaseUser eUser=firebaseAuth.getCurrentUser();
-        databaseReference.child(eUser.getUid()).setValue(profileInformation);
+        databaseReference.child("profile information").setValue(profileInformation);
         if(databaseReference!=null&&!name.isEmpty()&&!addressdata.isEmpty()) {
             Toast.makeText(this, "Information Saved....", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            Toast.makeText(this, "Error,Please try again", Toast.LENGTH_LONG).show();
         }
     }
     @Override
@@ -82,9 +87,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
         {
             setSaveInformation();
             finish();
-            startActivity(new Intent(this,HomeDashBoard.class));
+            startActivity(new Intent(this,SaveProfileInformation.class));
         }
-
     }
-
 }

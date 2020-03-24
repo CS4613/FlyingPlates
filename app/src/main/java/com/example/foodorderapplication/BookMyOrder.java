@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.braintreepayments.cardform.view.CardForm;
@@ -26,17 +28,20 @@ import static com.example.foodorderapplication.FinalCartPreview.grandTotalplus;
 import static com.example.foodorderapplication.FinalCartPreview.temparraylist;
 
 public class BookMyOrder extends AppCompatActivity {
-    Button placeorder;
+    LinearLayout placeorder;
     CardForm cardForm;
     AlertDialog.Builder alertBuilder;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference_Card,databaseReference_Cart;
+    TextView total_amount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_book_my_order);
         firebaseAuth=FirebaseAuth.getInstance();
+        total_amount = (TextView) findViewById(R.id.shipping_total_cart);
         databaseReference_Card= FirebaseDatabase.getInstance().getReference().child("Shipping and Card Details");
+        total_amount.setText("$"+String.valueOf(grandTotalplus));
         databaseReference_Cart= FirebaseDatabase.getInstance().getReference().child("Cart Details");
         FirebaseUser user=firebaseAuth.getCurrentUser();
         placeorder = findViewById(R.id.buynow);
@@ -70,8 +75,8 @@ public class BookMyOrder extends AppCompatActivity {
                         bookMyOrder.setcardCVV(cardForm.getCvv());
                         bookMyOrder.setCardpostalcode(cardForm.getPostalCode());
                         bookMyOrder.setTotalamount(grandTotalplus);
-                        databaseReference_Card.child(user.getUid()).setValue(bookMyOrder);
-                        databaseReference_Cart.child(user.getUid()).setValue(temparraylist);
+                        databaseReference_Card.child("user information").setValue(bookMyOrder);
+                        databaseReference_Cart.child("cart information").setValue(temparraylist);
                         Toast.makeText(BookMyOrder.this, "Thank you for purchase", Toast.LENGTH_LONG).show();
                         addNotification();
                         startActivity(new Intent(BookMyOrder.this,OrderConfirmationPage.class));

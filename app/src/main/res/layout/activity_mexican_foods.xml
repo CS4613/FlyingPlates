@@ -32,8 +32,8 @@
             >
             <ImageView
                 android:background="@android:color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="250dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/worth_whisking_caramel_cinnamon_apple_enchiladas_m02"
                 app:layout_collapseMode="parallax"

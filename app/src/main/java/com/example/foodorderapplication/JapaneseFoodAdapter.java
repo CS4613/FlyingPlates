@@ -60,7 +60,7 @@ public class JapaneseFoodAdapter extends RecyclerView.Adapter<JapaneseFoodAdapte
         image.setImageResource(modelFood.getImage());
         name.setText(modelFood.getName());
         place.setText(modelFood.getPlace());
-        price.setText(String.valueOf(modelFood.getPrice()));
+        price.setText("$"+String.valueOf(modelFood.getPrice()));
         HashSet hs = new HashSet();
         holder.elegantNumberButton.setOnValueChangeListener(new ElegantNumberButton.OnValueChangeListener() {
             @Override

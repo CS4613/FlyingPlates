@@ -56,11 +56,10 @@ public class HomeDashBoard extends AppCompatActivity implements FinalCartAdapter
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        TextView textName = navigationView.getHeaderView(0).findViewById(R.id.name);
-        TextView textemail = navigationView.getHeaderView(0).findViewById(R.id.textView);
-        /// textemail.setText(db.getString("email"));
+        TextView textemail = navigationView.getHeaderView(0).findViewById(R.id.emailaddress_header);
+        String email = UserModel.email;
+        textemail.setText(email);
         //textName.setText(db.getString("name"));
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
@@ -119,26 +118,6 @@ public class HomeDashBoard extends AppCompatActivity implements FinalCartAdapter
         super.onStart();
         invalidateOptionsMenu();
     }
-
-
-    /*    @Override
-        public boolean onOptionsItemSelected(MenuItem item) {
-            // Handle action bar item clicks here. The action bar will
-            // automatically handle clicks on the Home/Up button, so long
-            // as you specify a parent activity in AndroidManifest.xml.
-            int id = item.getItemId();
-
-            //noinspection SimplifiableIfStatement
-            if (id == R.id.action_addcart) {
-                if (cart_count < 1) {
-                    Toast.makeText(this, "there is no item in cart", Toast.LENGTH_SHORT).show();
-                } else {
-                    startActivity(new Intent(this, FinalCartPreview.class));
-                }
-            }
-
-            return super.onOptionsItemSelected(item);
-        }*/
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         MenuItem itemData = menu.findItem(R.id.action_addcart);
@@ -158,30 +137,26 @@ public class HomeDashBoard extends AppCompatActivity implements FinalCartAdapter
         }
         finalquanitity = FinalCartPreview.cart_count;
         actionView.setCount(FinalCartPreview.cart_count);
-       // Toast.makeText(getApplicationContext(),"Cart Count"+FinalCartPreview.cart_count,Toast.LENGTH_LONG).show();
         itemData.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.action_addcart:
                         if (cart_count < 1) {
-                            Toast.makeText(getApplicationContext(), "there is no item in cart", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(), "Your Personal Cart is Empty ", Toast.LENGTH_SHORT).show();
                         } else {
                             startActivity(new Intent(getApplicationContext(), FinalCartPreview.class));
                         }
                         break;
                 }
-
                 return true;
             }
         });
         return super.onPrepareOptionsMenu(menu);
     }
 
-
     @Override
     public void addCartItemView() {
-
     }
 
     @Override

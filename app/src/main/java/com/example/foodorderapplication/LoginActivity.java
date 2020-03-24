@@ -26,7 +26,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private FirebaseAuth firebaseAuth;
     private ProgressDialog progressDialog;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,13 +51,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             Toast.makeText(this,"Please enter email",Toast.LENGTH_SHORT).show();
             return;
         }
-        if(TextUtils.isEmpty(pwduser))
-        {
-            Toast.makeText(this,"Please enter passsword",Toast.LENGTH_SHORT).show();
+        if(TextUtils.isEmpty(pwduser)) {
+            Toast.makeText(this, "Please enter passsword", Toast.LENGTH_SHORT).show();
             return;
 
         }
-
+        UserModel.email=emailuser;
         progressDialog.setMessage("Please Wait...");
         progressDialog.show();
         firebaseAuth.signInWithEmailAndPassword(emailuser,pwduser).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {

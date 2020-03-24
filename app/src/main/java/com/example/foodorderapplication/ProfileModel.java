@@ -4,13 +4,13 @@ public class ProfileModel
 {
     public String name;
     public String address;
-    public int phonenumber;
+    public String phonenumber;
 
     public ProfileModel()
     {
     }
 
-    public ProfileModel(String name, String address, int phonenumber) {
+    public ProfileModel(String name, String address, String phonenumber) {
         this.name = name;
         this.address = address;
         this.phonenumber = phonenumber;
@@ -32,11 +32,11 @@ public class ProfileModel
         this.address = address;
     }
 
-    public int getPhonenumber() {
+    public String getPhonenumber() {
         return phonenumber;
     }
 
-    public void setPhonenumber(int phonenumber) {
+    public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
     }
 }

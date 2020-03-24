@@ -42,7 +42,7 @@ public class FinalCartAdapter extends RecyclerView.Adapter<FinalCartAdapter.View
 
     @Override
     public void onBindViewHolder(final FinalCartAdapter.ViewHolder holder, final int position) {
-        holder.productCartPrice.setText("$"+(modelStoreFoods.get(position).getPrice())*modelStoreFoods.get(position).getQuantity());
+         holder.productCartPrice.setText("$"+(modelStoreFoods.get(position).getPrice())*modelStoreFoods.get(position).getQuantity());
         holder.productCartCode.setText(modelStoreFoods.get(position).getName());
         holder.productCartQuantity.setText(String.valueOf(modelStoreFoods.get(position).getQuantity()));
         RequestOptions requestOptions = new RequestOptions();

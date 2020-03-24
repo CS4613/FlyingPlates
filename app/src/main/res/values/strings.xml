@@ -28,4 +28,7 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_exit">Logout</string>
+    <string name="no_records_found_please_update_the_profile">No records found , Please update the profile</string>
+    <string name="proceed">PROCEED</string>
+    <string name="enter_your_name">Enter Your Name</string>
 </resources>

@@ -1,7 +1,4 @@
 package com.example.foodorderapplication;
-
-
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,8 +11,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class FinalCartPreview extends AppCompatActivity implements  FinalCartAdapter.HomeCallBack,FinalCartAdapter.CallBackUs{
@@ -28,7 +23,7 @@ public class FinalCartPreview extends AppCompatActivity implements  FinalCartAda
     public static int cart_count = 0;
     public static TextView grandTotal;
     public static double grandTotalplus;
-    public static ArrayList<ModelStoreFood> temparraylist =null;
+    public static ArrayList<ModelStoreFood> temparraylist;
     public static ArrayList<ModelStoreFood> finalarray = new ArrayList<>();
 
     @Override
@@ -101,11 +96,7 @@ public class FinalCartPreview extends AppCompatActivity implements  FinalCartAda
     public void updateCartCount(Context context) {
         invalidateOptionsMenu();
     }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        invalidateOptionsMenu();
-    }
+
 
     @Override
     public void addCartItemView() {

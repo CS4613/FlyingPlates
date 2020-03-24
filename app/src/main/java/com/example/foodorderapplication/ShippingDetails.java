@@ -9,6 +9,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -49,9 +50,10 @@ public class ShippingDetails extends AppCompatActivity {
         total_amount.setText("$"+grandTotalplus);
         amount.setText("$"+grandTotalplus);
         shipping_amount.setText("$"+grandTotalplus);
+/*
 
-  /*      Toolbar toolbar = (Toolbar) findViewById(R.id.total_main_bar);
-        toolbar.setTitle("Home");
+        Toolbar toolbar = (Toolbar) findViewById(R.id.total_main_bar_shipping);
+        toolbar.setTitle("Cart");
         setSupportActionBar(toolbar);
         ActionBar ab = getSupportActionBar();
         if (ab != null) {
@@ -60,6 +62,7 @@ public class ShippingDetails extends AppCompatActivity {
             throw new NullPointerException("Something went wrong");
         }
 */
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -162,4 +165,11 @@ public class ShippingDetails extends AppCompatActivity {
         });
 
     }
+  /*  @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent myIntent = new Intent(getApplicationContext(), FinalCartPreview.class);
+        startActivityForResult(myIntent, 0);
+        return true;
+
+    }*/
 }
