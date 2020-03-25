@@ -32,24 +32,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:text="Food Name"
+                android:text="@string/food_name"
                 android:textStyle="bold"
                 />
             <TextView
                 android:id="@+id/item_place_italian1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Food Place"
+                android:text="@string/food_place"
                 android:textSize="14sp"
                 />
             <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
                 android:layout_width="110dp"
                 android:layout_height="40dp"
                 android:id="@+id/number_button"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="18dp"
-                app:textSize="9sp"
+                app:textSize="12sp"
                 app:backGroundColor="@color/colorAccent"
                 app:initialNumber="0"
                 app:finalNumber="5"
@@ -58,7 +58,7 @@
         </LinearLayout>
         <TextView
             android:id="@+id/item_price_italian"
-            android:text="$ price"
+            android:text="@string/price"
             android:layout_width="0dp"
             android:layout_height="30dp"
             android:gravity="center"

@@ -14,9 +14,22 @@ public class BookMyOrderModel
     public static String cardCVV;
     public static String cardpostalcode;
 
-    public BookMyOrderModel()
-    {
+    public static String getStatus() {
+        return status;
     }
+
+    public static void setStatus(String status) {
+        BookMyOrderModel.status = status;
+    }
+
+
+    public BookMyOrderModel() {
+    }
+
+    public static String status;
+
+
+
 
     public String getName() {
         return name;

@@ -41,12 +41,12 @@
             android:padding="15dp"/>
         <TextView
             android:padding="15dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:id="@+id/grand_total_cart"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="$0"
+            android:text="@string/_0"
             android:textSize="24sp"
             android:textColor="#fff"
             android:gravity="left|center_vertical"

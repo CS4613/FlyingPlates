@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Profile Page"
+            android:text="@string/profile_page"
             android:id="@+id/textProfile"
             android:gravity="center"
             android:paddingBottom="100dp"/>
@@ -29,13 +29,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:background="@drawable/round_button"
-            android:text="View Information"
+            android:text="@string/view_information"
             />
         <Button
             android:id="@+id/saveInformation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Edit Information"
+            android:text="@string/edit_information"
             android:background="@drawable/round_button"
             android:layout_gravity="center_horizontal"
             />

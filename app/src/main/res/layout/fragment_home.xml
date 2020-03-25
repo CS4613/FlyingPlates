@@ -87,7 +87,7 @@
                         android:layout_margin="10dp"
                         android:orientation="vertical">
 
-                        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        <FrameLayout
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent">
 
@@ -103,7 +103,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:text="American"
+                                android:text="@string/american"
                                 android:textAlignment="center"
                                 android:textColor="@android:color/black"
                                 android:textSize="18sp"
@@ -131,7 +131,7 @@
                         android:layout_margin="10dp"
                         android:orientation="vertical">
 
-                        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        <FrameLayout
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent">
 
@@ -147,7 +147,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:text="Indian"
+                                android:text="@string/indian"
                                 android:textAlignment="center"
                                 android:textColor="@android:color/black"
                                 android:textSize="18sp"
@@ -175,7 +175,7 @@
                         android:layout_margin="10dp"
                         android:orientation="vertical">
 
-                        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        <FrameLayout
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent">
 
@@ -191,7 +191,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:text="Mexican"
+                                android:text="@string/mexican"
                                 android:textAlignment="center"
                                 android:textColor="@android:color/black"
                                 android:textSize="18sp"
@@ -219,7 +219,7 @@
                         android:layout_margin="10dp"
                         android:orientation="vertical">
 
-                        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        <FrameLayout
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent">
 
@@ -235,7 +235,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:text="Italian"
+                                android:text="@string/italian"
                                 android:textAlignment="center"
                                 android:textColor="@android:color/black"
                                 android:textSize="18sp"
@@ -263,7 +263,7 @@
                         android:layout_margin="10dp"
                         android:orientation="vertical">
 
-                        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        <FrameLayout
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent">
 
@@ -279,7 +279,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:text="Chinese"
+                                android:text="@string/chinese"
                                 android:textAlignment="center"
                                 android:textColor="@android:color/black"
                                 android:textSize="18sp"
@@ -307,7 +307,7 @@
                         android:layout_margin="10dp"
                         android:orientation="vertical">
 
-                        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        <FrameLayout
                             android:layout_width="fill_parent"
                             android:layout_height="fill_parent">
 
@@ -323,7 +323,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="10dp"
-                                android:text="Japanese"
+                                android:text="@string/japanese"
                                 android:textAlignment="center"
                                 android:textColor="@android:color/black"
                                 android:textSize="18sp"
@@ -337,8 +337,4 @@
 
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

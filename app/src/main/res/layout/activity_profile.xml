@@ -19,34 +19,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Profile Page"
+            android:text="@string/profile_page"
             android:id="@+id/textProfile"
             android:gravity="center"/>
         <EditText
             android:id="@+id/TextName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Your Name"
+            android:hint="@string/enter_your_name"
             android:layout_margin="15dp"/>
         <EditText
             android:id="@+id/textAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your address"
+            android:hint="@string/enter_your_address"
             android:layout_margin="15dp"/>
         <EditText
             android:id="@+id/textPhoneNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:hint="Enter your PhoneNumber"
+            android:hint="@string/enter_your_phonenumber"
             android:layout_margin="15dp"/>
         <Button
             android:id="@+id/saveInformation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_button"
-            android:text="Save Information"
+            android:text="@string/save_information"
             android:layout_margin="15dp"
             />
    </LinearLayout>

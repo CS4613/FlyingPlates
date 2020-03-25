@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Login Page"
+            android:text="@string/login_page"
             android:id="@+id/textLogin"
             android:gravity="center"/>
         <EditText
@@ -26,22 +26,22 @@
             android:id="@+id/TextEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter email address"
+            android:hint="@string/enter_email_address"
             android:layout_margin="15dp"/>
         <EditText
             android:inputType="textPassword"
             android:id="@+id/TextPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Password"
+            android:hint="@string/enter_password"
             android:layout_margin="15dp"/>
         <TextView
             android:textAlignment="textEnd"
-            android:text="Forgot Password"
+            android:text="@string/forgot_password"
             android:id="@+id/forgotpassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingRight="20dp"
+            android:paddingEnd="20dp"
             />
         <Button
             android:id="@+id/buttonSignIn"
@@ -49,12 +49,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:background="@drawable/round_button"
-            android:text="SIGNIN"
+            android:text="@string/signin"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:visibility="visible" />
         <TextView
             android:textAlignment="center"
-            android:text="Not have an account ? Signup Here"
+            android:text="@string/not_have_an_account_signup_here"
             android:id="@+id/Signup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

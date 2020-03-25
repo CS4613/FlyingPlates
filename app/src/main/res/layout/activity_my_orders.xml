@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    app:layoutManager="android.support.v7.widget.LinearLayoutManager"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MyOrders">
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/background"
+    tools:context=".MyOrders"
+    >
 
-    <TextView
-        android:id="@+id/textLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="My Orders"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+ <androidx.recyclerview.widget.RecyclerView
+     android:layout_width="match_parent"
+     android:id="@+id/listOrders"
+     android:layout_height="match_parent"
+     android:background="@android:color/transparent"/>
+</RelativeLayout>

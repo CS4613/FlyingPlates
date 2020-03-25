@@ -23,7 +23,7 @@
             android:padding="10dp"
             android:textColor="#ffffff"
             android:background="@drawable/round_button"
-            android:text="Sign In" />
+            android:text="@string/sign_in" />
 
 
         <Button
@@ -34,7 +34,7 @@
             android:textColor="#ffffff"
             android:layout_margin="10dp"
             android:background="@drawable/round_button"
-            android:text="SignUp" />
+            android:text="@string/signup" />
 
     </LinearLayout>
 

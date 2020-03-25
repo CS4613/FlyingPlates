@@ -31,7 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="   Contact Details"
+                android:text="@string/contact_details"
                 android:id="@+id/textProfile"
                 />
             <EditText
@@ -44,27 +44,27 @@
                 android:id="@+id/textAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter your address"
+                android:hint="@string/enter_your_address"
                 android:layout_margin="15dp"/>
             <EditText
                 android:id="@+id/textPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:hint="Enter your PhoneNumber"
+                android:hint="@string/enter_your_phonenumber"
                 android:layout_margin="15dp"/>
             <EditText
                 android:id="@+id/textZipCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:hint="Enter your ZipCode"
+                android:hint="@string/enter_your_zipcode"
                 android:layout_margin="15dp"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="   Promotional Codes"
+                android:text="@string/promotional_codes"
                 android:id="@+id/textCoupon"
                 />
 
@@ -76,10 +76,10 @@
                     android:layout_height="wrap_content"
                     android:padding="15dp"
                     android:layout_weight="1"
-                    android:hint="Enter your Coupon Code"
+                    android:hint="@string/enter_your_coupon_code"
                     android:layout_width="fill_parent">
                 </EditText>
-                <Button  android:text="Enter"
+                <Button  android:text="@string/enter"
                     android:id="@+id/Enter"
                     android:background="@drawable/capsule"
                     android:layout_width="wrap_content"
@@ -101,9 +101,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="18dip"
-                        android:text="Amount"
+                        android:text="@string/amount"
                         android:textColor="#000"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/TotalAmount"
@@ -111,7 +111,7 @@
                         android:layout_height="wrap_content"
                         android:padding="18dip"
                         android:textColor="#000"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                 </TableRow>
                 <TableRow
@@ -123,9 +123,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="18dip"
-                        android:text="Promotional Discount"
+                        android:text="@string/promotional_discount"
                         android:textColor="#000"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/TotalPromotionalAmount"
@@ -133,7 +133,7 @@
                         android:layout_height="wrap_content"
                         android:padding="18dip"
                         android:textColor="#FF0000"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
                 </TableRow>
                 <TableRow
                     android:layout_width="fill_parent"
@@ -142,16 +142,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="18dip"
-                        android:text="Total Amount"
+                        android:text="@string/total_amount"
                         android:textColor="#000"
-                        android:textSize="12dp" />
+                        android:textSize="12sp" />
                     <TextView
                         android:id="@+id/TotalFinalAmount"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:padding="18dip"
                         android:textColor="#000"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
                 </TableRow>
             </TableLayout>
             </LinearLayout>
@@ -167,7 +167,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="PROCEED "
+            android:text="@string/proceed"
             android:textColor="#fff"
             android:gravity="right|center_vertical"
             android:textStyle="bold"
@@ -176,16 +176,16 @@
 
         <TextView
             android:padding="15dp"
-            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
             android:id="@+id/shipping_total_cart"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="$0"
+            android:text="@string/_0"
             android:textSize="20sp"
             android:textColor="#fff"
             android:gravity="left|center_vertical"
             android:textStyle="bold"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginEnd="10dp"/>
     </LinearLayout>
 </RelativeLayout>
