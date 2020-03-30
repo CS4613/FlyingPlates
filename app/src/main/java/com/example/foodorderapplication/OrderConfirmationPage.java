@@ -35,8 +35,6 @@ public class OrderConfirmationPage extends AppCompatActivity {
 
     @Bind(R.id.checkImageView)
     ImageView checkMarkImageView;
-
-
     @Bind(R.id.circleImageView)
     ImageView circleImageView;
 
@@ -51,7 +49,7 @@ public class OrderConfirmationPage extends AppCompatActivity {
         String name = OrderModel.name;
         String address_model = OrderModel.address;
         String pincode = OrderModel.pincode;
-        totalquantity_Edittext.setText(finalquanitity+" items will be delivered to");
+        totalquantity_Edittext.setText(finalquanitity+" items will be delivered to ");
         address.setText(name+","+address_model+","+pincode);
     }
     public static void start(Context context) {
