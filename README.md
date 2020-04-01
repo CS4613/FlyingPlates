@@ -39,3 +39,5 @@ With the increasing popularity of food delivery in colleges and universities, th
 ***
 ### Upcoming features
 * Working on UI for my orders page
+### Timeline:
+The estimated time to complete the application will be on or before first week of April.
