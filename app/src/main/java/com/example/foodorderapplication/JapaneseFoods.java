@@ -40,7 +40,7 @@ public class JapaneseFoods extends AppCompatActivity  {
         }
         foodsList = new ArrayList<>();
         foodsList.add(new ModelFood(R.drawable.chicken_katsu_curry_j01, "Chicken Katsu Curry", "Curry", 11.99, 20, 20));
-        foodsList.add(new ModelFood(R.drawable.karaagejapanesefriedchicken_j02, "Karaage Japanese Fried Chicken", "Fast Foods", 6.99, 21, 20));
+        foodsList.add(new ModelFood(R.drawable.karaagejapanesefriedchicken_j02, "Karaage Japanese Fried Chicken", "Fast Foods", 9.99, 21, 20));
         foodsList.add(new ModelFood(R.drawable.honey_toast_j03, "HoneyToast", "Sweet", 6.99, 22, 20));
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setHasFixedSize(true);

@@ -24,7 +24,7 @@ public class AmericanFoods extends AppCompatActivity  {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_american_foods);
         recyclerView = findViewById(R.id.rv);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.total_main_bar);
+        Toolbar toolbar = findViewById(R.id.total_main_bar);
         toolbar.setTitle("Home");
         setSupportActionBar(toolbar);
         ActionBar ab = getSupportActionBar();
@@ -35,8 +35,8 @@ public class AmericanFoods extends AppCompatActivity  {
         }
         foodsList = new ArrayList<>();
         foodsList.add(new ModelFood(R.drawable.crispychicenburger_a1, "Chicken Burger", "Fast Foods", 4.99, 1, 20));
-        foodsList.add(new ModelFood(R.drawable.bbqchickenpizza_a2, "Chicken Pizza", "Fast Foods", 5.99, 2, 20));
-        foodsList.add(new ModelFood(R.drawable.frenchfries_a3, "French Fries", "Fast Foods", 6.99, 3, 20));
+        foodsList.add(new ModelFood(R.drawable.bbqchickenpizza_a2, "Chicken Pizza", "Fast Foods", 9.99, 2, 20));
+        foodsList.add(new ModelFood(R.drawable.frenchfries_a3, "French Fries", "Fast Foods", 4.99, 3, 20));
         foodsList.add(new ModelFood(R.drawable.chickennuggets_a4, "Chicken Nuggets", "Fast Foods", 9.99, 4, 20));
         foodsList.add(new ModelFood(R.drawable.waldrofsalad_a5, "Waldrof salads", "Fast Foods", 5.99, 5, 20));
         recyclerView.setHasFixedSize(true);

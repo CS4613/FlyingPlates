@@ -40,7 +40,7 @@ public class ItalianFoods extends AppCompatActivity  {
 
         foodsList = new ArrayList<>();
         foodsList.add(new ModelFood(R.drawable.basil_blur_close_up_i01, "Basil Blur Close Up", "Italian Foods", 12.99, 14, 20));
-        foodsList.add(new ModelFood(R.drawable.italianchickenpasta_i02, "Italian Chicken Pasta", "Italian Foods", 7.99, 15, 20));
+        foodsList.add(new ModelFood(R.drawable.italianchickenpasta_i02, "Italian Chicken Pasta", "Italian Foods", 9.99, 15, 20));
         foodsList.add(new ModelFood(R.drawable.honey_semifreddo_frozen_italian_dessert_i03, "Honet frozen Italian Dessert", "Italian Foods", 5.99, 16, 20));
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);

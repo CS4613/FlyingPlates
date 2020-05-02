@@ -36,7 +36,7 @@ public class ChineseFoods extends AppCompatActivity  {
         }
 
         foodsList = new ArrayList<>();
-        foodsList.add(new ModelFood(R.drawable.chickenmanchuria_c01, "Chicken Manchuria", "Fast Foods", 8.99, 17, 20));
+        foodsList.add(new ModelFood(R.drawable.chickenmanchuria_c01, "Chicken Manchuria", "Fast Foods", 9.99, 17, 20));
         foodsList.add(new ModelFood(R.drawable.chickennoodles_c02, "Chicken Noodles", "Fast Foods", 7.99, 18, 20));
         foodsList.add(new ModelFood(R.drawable.sesameseedballschina_c03, "Sesamese Seed Balls", "Fast Foods", 6.99, 19, 20));
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
