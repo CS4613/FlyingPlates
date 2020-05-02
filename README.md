@@ -37,4 +37,8 @@ With the increasing popularity of food delivery in colleges and universities, th
 2. Elegant Number Button : Implement a number counter with increment and decrement buttons.
 3. TextDrawable : This light-weight library provides images with letter/text like the Gmail app.
 ***
-
+### Upcoming features
+* Working on UI for my orders page
+***
+### Timeline:
+The estimated time to complete the application will be on or before first week of April.
