@@ -103,9 +103,9 @@ public class BookMyOrder extends AppCompatActivity {
     private void addNotification() {
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(this)
-                        .setSmallIcon(R.drawable.ic_launcher_background)
+                        .setSmallIcon(R.mipmap.ic_launcher_main)
                         .setContentTitle("Flying Plates")
-                        .setContentText("Thanks for placing the order");
+                        .setContentText("Thanks for placing the order. Your order will be delivered shortly");
         Intent notificationIntent = new Intent(this, HomeDashBoard.class);
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent,
                 PendingIntent.FLAG_UPDATE_CURRENT);
