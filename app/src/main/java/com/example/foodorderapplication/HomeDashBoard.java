@@ -73,12 +73,8 @@ public class HomeDashBoard extends AppCompatActivity implements FinalCartAdapter
 
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
 
-                } else if (id == R.id.nav_orders) {
-
-                    Intent intent = new Intent(HomeDashBoard.this, MyOrders.class);
-                    startActivity(intent);
-
-                } else if (id == R.id.nav_profile) {
+                }
+                else if (id == R.id.nav_profile) {
                     Intent intent = new Intent(HomeDashBoard.this, SaveProfileInformation.class);
                     startActivity(intent);
 

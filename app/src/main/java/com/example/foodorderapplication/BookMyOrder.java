@@ -59,8 +59,8 @@ public class BookMyOrder extends AppCompatActivity {
                 {
                 alertBuilder = new AlertDialog.Builder(BookMyOrder.this);
                 alertBuilder.setTitle("Confirm before purchase");
-                alertBuilder.setMessage("Card Number:"+cardForm.getCardNumber()+ " \n "+"Card Expiry date : "+cardForm.getExpirationDateEditText().getText().toString()+
-                                        "CVV "+cardForm.getCvv());
+                alertBuilder.setMessage("Card Number: "+cardForm.getCardNumber()+ " \n"+"Card Expiry date : "+cardForm.getExpirationDateEditText().getText().toString()
+                        + " \n"+ "CVV: "+cardForm.getCvv());
                 alertBuilder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {

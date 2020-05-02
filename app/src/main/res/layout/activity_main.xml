@@ -15,7 +15,6 @@
         android:layout_centerInParent="true"
         android:orientation="horizontal">
 
-
         <Button
             android:id="@+id/user"
             android:layout_width="wrap_content"

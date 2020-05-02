@@ -7,6 +7,7 @@ import android.graphics.drawable.Animatable;
 import android.os.Bundle;
 
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -31,6 +32,8 @@ public class OrderConfirmationPage extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
     private String userId;
     private ListView listView;
+    private ImageView imageView;
+    private TextView home;
     private TextView totalquantity_Edittext,address;
 
     @Bind(R.id.checkImageView)
@@ -45,12 +48,26 @@ public class OrderConfirmationPage extends AppCompatActivity {
         setContentView(R.layout.activity_order_confirmation_page);
         totalquantity_Edittext = (TextView) findViewById(R.id.textView26);
         address = (TextView)findViewById(R.id.textView27);
+        imageView = findViewById(R.id.imageView4);
+        home = findViewById(R.id.homeback);
         ButterKnife.bind(this);
         String name = OrderModel.name;
         String address_model = OrderModel.address;
         String pincode = OrderModel.pincode;
         totalquantity_Edittext.setText(finalquanitity+" items will be delivered to");
         address.setText(name+","+address_model+","+pincode);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), HomeDashBoard.class));
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), HomeDashBoard.class));
+            }
+        });
     }
     public static void start(Context context) {
         Intent intent = new Intent(context, OrderConfirmationPage.class);

@@ -16,7 +16,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ResetPasswordActivity"></activity>
-        <activity android:name=".MyOrders" />
         <activity android:name=".OrderConfirmationPage" />
         <activity android:name=".ShippingDetails" />
         <activity android:name=".BookMyOrder" />
@@ -32,7 +31,8 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".UserChooseActivity">
+        <activity android:name=".UserChooseActivity"/>
+        <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
